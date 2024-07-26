@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/account_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="70dp"
+                    app:cardCornerRadius="100pt">
+
+                    <ImageView
+                        android:id="@+id/user_img_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/quality_restoration_20240209144958274" />
+
+                    <ImageButton
+                        android:id="@+id/change_img_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="151dp"
+                        android:background="#59FFFFFF"
+                        app:srcCompat="@drawable/image" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/username_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Quannichan"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/change_pasbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Change password"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/change_usnamebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/custom_btn"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Change user name"
+                    android:textAlignment="center"
+                    android:textSize="18dp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Log out"
+                    android:textAlignment="center"
+                    android:textColor="#FF0000"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tools:backgroundTint="@null" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/wrap_friends_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/header_friends_wrap"
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical"
+                        android:text="Friends"
+                        android:textSize="40dp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/search_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/edit_text_custom"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="Search..."
+                    android:inputType="text"
+                    android:paddingStart="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/listFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:ignore="DuplicateIds" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/wrap_mes_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="68dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/header_chat_wrap"
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center_vertical"
+                        android:text="Chat"
+                        android:textSize="40dp"
+                        android:textStyle="bold"
+                        android:typeface="normal" />
+
+                    <Button
+                        android:id="@+id/new_group"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/circle_btn"
+                        android:drawableTop="@drawable/baseline_edit_24"
+                        android:gravity="center"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/edit_text_custom"
+                    android:drawableStart="@drawable/baseline_search_24"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:hint="Search..."
+                    android:inputType="text"
+                    android:paddingStart="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/listMes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/chat_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/chat_bubble"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp"
+            android:text="Chat"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            tools:backgroundTint="#00FFFFFF" />
+
+        <Button
+            android:id="@+id/friend_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/friends"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp"
+            android:text="Friends"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            tools:backgroundTint="#00FFFFFF" />
+
+        <Button
+            android:id="@+id/setting_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:drawableTop="@drawable/setting"
+            android:fontFamily="sans-serif-medium"
+            android:paddingTop="1dp"
+            android:paddingBottom="2dp"
+            android:text="Setting"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            tools:backgroundTint="#00FFFFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

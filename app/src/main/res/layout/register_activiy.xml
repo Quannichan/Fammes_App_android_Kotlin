@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="7pt"
+            app:cardElevation="0dp"
+            android:outlineAmbientShadowColor="@color/black">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/icon"
+                tools:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Create a new account."
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="41dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_btn" />
+
+        <EditText
+            android:id="@+id/usname"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="Full name..."
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:backgroundTint="@null" />
+
+        <EditText
+            android:id="@+id/email_regis"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:backgroundTint="@null"
+            android:drawableStart="@drawable/baseline_alternate_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Email..."
+            android:inputType="text|textEmailAddress"
+            android:paddingStart="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/pass_regis"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Password..."
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:backgroundTint="@null" />
+
+        <EditText
+            android:id="@+id/re_pass"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Re-Password..."
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/regis_btn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/custom_btn"
+            android:checkable="false"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="Create Account"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <ProgressBar
+            android:id="@+id/progressBar_regist"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=" "
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/process"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:outlineAmbientShadowColor="@color/black"
+            app:cardCornerRadius="7pt"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/icon"
+                tools:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Sign in to Family Message."
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="41dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_btn" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableLeft="@drawable/baseline_alternate_email_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="Email..."
+            android:inputType="text|textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:backgroundTint="@null" />
+
+        <EditText
+            android:id="@+id/pass_login"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edit_text_custom"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="Password..."
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/signin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/custom_btn"
+            android:checkable="false"
+            android:clickable="true"
+            android:fontFamily="sans-serif-medium"
+            android:text="Sign In"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=" "
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

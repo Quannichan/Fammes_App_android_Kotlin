@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/bottomWrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="2dp"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/back_mes"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="@null"
+                android:src="@drawable/baseline_arrow_back_24" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="2dp">
+
+                    <ImageView
+                        android:id="@+id/avatar_chat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/baseline_person_24" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/name_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAlignment="viewStart"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/loading_mes"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_weight="1" />
+
+            <ScrollView
+                android:id="@+id/scroll_wrap_mes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/wrap_mess"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                    <LinearLayout
+                        android:id="@+id/wrap_top_info_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            app:cardCornerRadius="100dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/img_title"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/baseline_person_24" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/Name_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomWrap"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#E1E1E1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/mes_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_custom"
+                android:backgroundTint="@null"
+                android:ems="10"
+                android:hint="Type message here"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <ImageButton
+                android:id="@+id/close_file_choose"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/custom_btn"
+                android:backgroundTint="@null"
+                android:visibility="gone"
+                app:srcCompat="@drawable/reject" />
+
+            <ImageButton
+                android:id="@+id/file_choose"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/custom_btn"
+                android:src="@drawable/baseline_attach_file_24"
+                tools:backgroundTint="@null" />
+
+            <ImageButton
+                android:id="@+id/send_mes_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/custom_btn"
+                app:srcCompat="@drawable/baseline_arrow_forward_24"
+                tools:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wrap_media_choosen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/img_library"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#E8E7E7"
+                    app:srcCompat="@drawable/image"
+                    tools:backgroundTint="@null" />
+
+                <ImageButton
+                    android:id="@+id/video_library"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    app:srcCompat="@drawable/film"
+                    tools:backgroundTint="@null" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imge_choose"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#E6E6E6"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

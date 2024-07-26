@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="7dp">
+
+                <ImageButton
+                    android:id="@+id/back_change_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/baseline_arrow_back_24" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="50dp"
+                app:cardCornerRadius="50pt">
+
+                <ImageView
+                    android:id="@+id/ava_choose"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/pass_change_img"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edit_text_custom"
+                android:ems="10"
+                android:hint="Enter pasword..."
+                android:inputType="text|textPassword"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="16dp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/acpt_change_img"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/custom_btn"
+                android:fontFamily="sans-serif-medium"
+                android:text="Change"
+                android:textSize="18dp"
+                android:visibility="gone"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/acpt_default"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/circle_btn"
+                android:fontFamily="sans-serif-medium"
+                android:text="Default"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
